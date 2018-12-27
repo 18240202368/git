@@ -7,6 +7,6 @@
 <title>第一个maven工程</title>
 </head>
 <body>
-Hello World!
+Hello World!   MyEclipse测试GitHub
 </body>
 </html>
