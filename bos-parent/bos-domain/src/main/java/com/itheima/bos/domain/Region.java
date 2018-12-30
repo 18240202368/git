@@ -3,12 +3,13 @@ package com.itheima.bos.domain;
 import java.util.HashSet;
 import java.util.Set;
 
+import net.sf.json.JSONObject;
+
 /**
  * 区域
  */
 
 public class Region implements java.io.Serializable {
-
 	// Fields
 
 	private String id;
@@ -19,6 +20,10 @@ public class Region implements java.io.Serializable {
 	private String shortcode;
 	private String citycode;
 	private Set subareas = new HashSet(0);
+
+	public String getName() {
+		return province + " " + city + " " + district;
+	}
 
 	// Constructors
 
@@ -32,8 +37,8 @@ public class Region implements java.io.Serializable {
 	}
 
 	/** full constructor */
-	public Region(String id, String province, String city, String district,
-			String postcode, String shortcode, String citycode, Set subareas) {
+	public Region(String id, String province, String city, String district, String postcode, String shortcode,
+			String citycode, Set subareas) {
 		this.id = id;
 		this.province = province;
 		this.city = city;
